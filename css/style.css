@@ -1,0 +1,70 @@
+body {
+	background-color: #79d0cc;
+}
+
+table{
+	background-color: #74e1b2;
+	color: #5235b2;
+	width: 600px;
+	border-collapse: collapse;
+	text-align: center;
+	font-weight: bold;
+
+}
+button {
+	cursor: pointer;
+}
+
+th, td{
+	border: 1px solid black;
+	padding: 6px
+	}
+[data-type]{
+	cursor: pointer;
+    }
+[data-type]:hover{
+	background-color: #d9edf7;
+}
+td input.edit {
+	display: none;
+}
+tr.editing td input.edit{
+		display: block;
+		width: 100%;
+		padding: 4px;
+		margin: 0;
+		border: none;
+		font: inherit;
+		height: 28px;
+	}	
+.userplace {
+	position: relative;
+	top: 20px;
+	width: 50%;
+	margin: auto;
+	padding: 3px 1px 1px 10px;
+}
+.find {
+color: #e43d3d;
+}
+.form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+.content{
+	position: relative;
+	margin: auto;
+	width: 50%;
+}
+#credits {
+	position: relative;
+	margin: 30px auto;
+	color: #999;
+	text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
+	text-align: center;
+}
+
+#credits a {
+	color: #888;
+}
