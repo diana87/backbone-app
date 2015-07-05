@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Backbone Table</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css"/>
+	</head>
+	<body>
+		<div class="container-fluid">
+		<div class="col-xs-3">
+			<input type="text" class="form-control" placeholder="Search">
+			</div>
+			<button type="button" class="btn btn-default">
+				<span class="glyphicon glyphicon-search"></span>
+			Search</button>
+		</div>
+		<div class="content">
+			<table class="table" id="ad-table" width="600" border="2">
+				<caption>Table</caption>
+				<th data-type='name' >Name</th><th data-type='age'>Age</th><th data-type='job'>Job</th><th>Edit</th><th>X</th></tr>
+			</table>
+		</div>
+		<div class="userplace">
+			<input type="text" id="username" value="name"/>
+			<input type="text" id="age" value="age"/>
+			<input type="text" id="job" value="job"/>
+			<input type="button" class='add' value="Add"/>
+		</div>
+		<div id="credits">
+			Created by
+			<a href='http://dinacheley.com/'>&copy Diana Byaka</a>.2015
+		</div>
+
+	<script type="text/template" id="itemTemplate">
+		<td><%= name %><input type='name' class='edit'></td><td><%= age %><input type='age' class='edit'></td><td><%= job %><input type='job' class='edit'></td><td><input type='button' class='editBut' value='Edit'/></td><td><input type='button' class='deleteBut' value='x'/></td>
+	</script>
+	<script src="js/lib/jquery.js"></script>
+	<script src="js/lib/underscore.js"></script>
+	<script src="js/lib/backbone.js"></script>
+	<script src="js/lib/backbone.localStorage.js"></script>
+	<script src="js/script.js"></script>
+	</body>
+</html>	
