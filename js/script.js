@@ -1,4 +1,3 @@
-//запускаем jquery когда документ готов, объявляем про-во имен для приложения
 $(function(){
 	App = {
 		Models: {},
@@ -113,9 +112,7 @@ $(function(){
 			return this;
 		},
 		addOne: function(person) {
-			// создавать новый дочерний вид
 			var personView = new App.Views.Person({ model: person });
-			// добавлять его в корневой элемент
 			this.$el.append(personView.render().el);
 		},
 		addAll: function() {
@@ -165,7 +162,7 @@ $(function(){
             	age: age,
             	job: job
             };
-            this.collection.create(newPerson, {sort: false}); //to add and save
+            this.collection.create(newPerson, {sort: false});
         },
 
     });
