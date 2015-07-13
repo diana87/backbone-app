@@ -4,17 +4,13 @@ $(function(){
 		Views: {},
 		Collections: {}
 	};
-
 	//шаблон используемый в View person(user)
 	template = function(id) {
 		return _.template($('#' + id).html());
 	};
-
 	//model user
 	App.Models.Person = Backbone.Model.extend({
-		
 	});
-
 	//collection of users
 	App.Collections.Persons = Backbone.Collection.extend({
 		model: App.Models.Person, //connect collection of users with model (user)
@@ -40,7 +36,6 @@ $(function(){
 		}
 		
 	});
-	
 	//view of user
 	App.Views.Person = Backbone.View.extend({
 		tagName: 'tr',
@@ -86,7 +81,6 @@ $(function(){
 			this.$el.removeClass("editing"); //hide input form
 			
 		},
-	
 		destroy: function() {
     		this.model.destroy();
 		},
@@ -94,7 +88,6 @@ $(function(){
     		this.$el.remove(); 
 		}
 	});
-
 	//view of full users
 	App.Views.Persons = Backbone.View.extend({
 		el: $('#ad-table'),
@@ -106,8 +99,7 @@ $(function(){
 			//this.listenTo(this.collection, 'sort', this.renderSort);
 			this.collection.fetch();
         },
-
-		render: function() {
+        	render: function() {
 			this.collection.each(this.addOne, this);
 			return this;
 		},
@@ -139,33 +131,29 @@ $(function(){
 			this.$el.find('td').remove();
 			this.render();
 		}
-		
-		
 	});
-
 	//new view for added user
 	App.Views.AddPerson = Backbone.View.extend({
 		el: '.userplace',
-        events: {
-            'click .add' : 'getData',
-        },
-        initialize: function() {
-        },
-        getData: function(e) {
-            e.preventDefault();
+        	events: {
+            		'click .add' : 'getData',
+        	},
+        	initialize: function() {
+        	},
+        	getData: function(e) {
+            		e.preventDefault();
 			var newPerson,
 				name =  $('#username').val(),
-            	age = Number($('#age').val()),
-            	job = $('#job').val();
+            			age = Number($('#age').val()),
+            			job = $('#job').val();
 			newPerson = {
-            	name: name,
-            	age: age,
-            	job: job
-            };
-            this.collection.create(newPerson, {sort: false});
-        },
-
-    });
+            		name: name,
+            		age: age,
+            		job: job
+            		};
+            this.collection.create(newPerson, {sort: false})
+        	},
+	});
     App.Views.Search = Backbone.View.extend({
     	el: '.container-fluid',
     	events: {
